@@ -40,7 +40,7 @@
 </head>
 <body>
     <header class="h-[100vh] w-full bg-[url('carousel.png')] bg-cover relative">
-        <nav class="nav h-[80px] w-full bg-[white] flex  items-center fixed">
+        <nav class="nav h-[80px] w-full bg-[white] flex  items-center fixed z-[100]">
              <div class="nav-center h-full w-full flex items-center relative">
                 <div class="nav-header h-full w-full flex justify-around items-center">
                     <div class="logo">
@@ -108,10 +108,9 @@
                 <a href="Signin.html" target="_self" class="text-[#353f4f] text-[18px] font-semibold hover:text-[black] p-[20px] hidden md:block">Sign In</a>
                 <button class="text-[white] h-[50px] w-[200px] bg-[dodgerblue] font-semibold rounded-lg hover:bg-[#0345bf] hidden md:block">Get Started</button>
              </div>
-            </div>
-           
-        </nav>    
-        <div class="sidenav h-full w-full bg-[#00000080] opacity-0.5 absolute fixed flex justify-end hidden lg:hidden shadow-lg transition-opacity duration-300 ease-out"style="animation: sidedisp 0.5s ease-out forwards;">
+            </div>  
+        </nav> 
+        <div class="sidenav h-[100vh] w-full bg-[#00000080] opacity-0.5 absolute top-0 flex justify-end hidden lg:hidden shadow-lg transition-opacity duration-300 ease-out"style="animation: sidedisp 0.5s ease-out forwards;">
             <div class="sidenav-options h-full w-[300px] bg-[dodgerblue] p-[25px] flex flex-col">
                <div class="close-btn w-full"><i class="fa fa-xmark text-[white] text-[32px] float-right"></i></div>
                <a href="#about" class="text-[white] text-[20px] w-full flex justify-between items-center p-[5px] font-bold">About <i class="fa fa-angle-right text-[white] py-[10px] text-[18px]"></i></a>
@@ -120,9 +119,10 @@
                <a href="#pricing" class="text-[white] text-[20px] w-full flex justify-between items-center p-[5px] font-bold">Pricing</a>
                <a href="#testimonials" class="text-[white] text-[20px] w-full flex justify-between items-center p-[5px] font-bold">Testimonials</a>
             </div>
-
-        </div> 
+    
+        </div>    
     </header>
+  
     <div class="w-full flex flex-col items-center pt-[20px] px-[10px]">
         <div class="text-[20px] md:text-[30px] lg:text-[60px] text-center font-bold text-[#343f4f] w-full max-w-[90%] lg:w-[900px] leading-none">
             Digital marketing that drives results for your business
@@ -195,7 +195,7 @@
         </div>
     
        </div>
-    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
+    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg z-0"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
         <p class="text-[#6c757d] text-[24px] text-center">Ligula risus auctor tempus magna feugiat lacinia.</p>
         <!-- Swiper -->
         <div class="swiper mySwiper md:w-[90vw] h-[500px]  p-[50px] bg-[#eee]">
@@ -211,7 +211,7 @@
               </div>
           
           </div>
-          <div class="swiper-slide  text-[18px] bg-[#fff] flex justify-center items-center md:h-[340px] md:w-[400px] flex-col p-[20px] md:p-[20px] md:p-[42px] rounded-lg">
+          <div class="swiper-slide  text-[18px] bg-[#fff] flex justify-center items-center md:h-[340px] md:w-[400px] flex-col p-[20px] px-[25px] md:p-[20px] md:p-[42px] rounded-lg">
               <p class="mb-[20px]">At sagittis congue augue diam egestas magna an ipsum vitae purus ipsum primis and cubilia laoreet augue egestas a luctus donec ltrice ligula porta augue magna suscipit lectus gestas</p>
               <div class="author h-[100px] w-full flex  items-center">
                   <img src="review-author-2.jpg" class="h-[70px] w-[70px] rounded-full p-[10px]" >
