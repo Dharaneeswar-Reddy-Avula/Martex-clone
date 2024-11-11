@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+        mode: 'jit',
+        theme: {
+            extend: {},
+        },
+        variants: {},
+        plugins: [],
+    }
+  </script>
+  </head>
+  <body>
+  <div class="signinWrap h-[100vh] w-full bg-[url('SignInBg.jpg')] bg-cover flex justify-center items-center">
+    <div class="flex md:flex-row flex-col h-[500px] w-[70vw] gap-6 rounded-lg bg-[white] mx-[auto] my-[auto]">
+        <div class="flex-1  h-[500px] w-[1/2] hidden md:block">
+                <img src="signbg.png" class="w-full h-full rounded-lg">
+        </div>
+        <div class="flex-1 mt-2 mr-16 ml-10 py-[30px]">
+            <div class="text-black  font-medium text-[#353f4f]">
+                Username
+            </div>
+            <div class="pt-2">
+                <input type="text" id="username" name="username" class="bg-gray-200  text-[6c757d] rounded-md w-full p-4 outline-[dodgerblue]" placeholder="Username">
+
+            </div>
+            <div class="text-black pt-5 font-medium text-[#353f4f]">
+                Password
+            </div>
+            <div class="pt-2 w-full">
+                <input type="password" id="username" name="username" class="bg-gray-200 text-[6c757d] rounded-md w-full p-4 outline-[dodgerblue]" placeholder="Password">
+
+            </div>
+            <div class="pt-5 text-black  font-medium">
+                <input type="checkbox" name="remember me" id="remember me" class="rounded-md p-4 text">
+                Remember me
+            </div>
+            <div class="pt-5">
+                <button type="button" class="bg-blue-500 w-full mr-10 text-2xl text-white rounded-md p-3">Log in</button>
+            </div>
+            <div class="pt-5 text-[#6c757d]">
+                Create an account
+            </div>
+            <div class="pt-2 text-[#6c757d]">
+                Forgot your user name?
+            </div>
+            <div class="pt-2 text-[#6c757d]">
+                Forgot your password?
+            </div>
+        </div>
+       
+        
+    </div>
+  </div>
+  </body>
+</html>
