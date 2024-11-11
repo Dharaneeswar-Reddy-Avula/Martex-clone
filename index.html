@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         tailwind.config = {
             mode: 'jit',
@@ -46,51 +45,79 @@
             </div>
         </nav>
     </header>
-    <div class="h-screen flex flex-col  m-5 m-2 items-center">
-        <div class=" text-[25px] lg:text-[60px] text-center font-bold text-[#343f4f] lg:w-[900px] leading-none">
+    <div class="w-full flex flex-col items-center pt-[20px] px-[10px]">
+        <div class="text-[20px] md:text-[30px] lg:text-[60px] text-center font-bold text-[#343f4f] w-full max-w-[90%] lg:w-[900px] leading-none">
             Digital marketing that drives results for your business
         </div>
-        <div class="font-light text-center pt-5 text-gray-500 text-[20px] font-semibold">
+        <div class="font-light text-center pt-5 text-gray-500 text-[16px] md:text-[20px] font-semibold">
             Lingula risus auctor tempus magna feugiat lacinia
         </div>
-        <div class="pt-5 w-full h-[600px] flex justify-center">
-            <div class="flex h-full lg:w-[80vw] md:flex-row md:flex-wrap flex-col gap-[4vw] md:justify-center items-center">
-                <div class="flex-1 bg-gray-200 h-[380px] w-[280px] rounded-lg">
-                    <div class="p-[20px]"><img src="https://martex.windstripedesign.ro/images/f_01.png"></div>
-                    <div class="text-center  font-bold text-[24px]">Intuitive dashboard</div>
-                    <div class="text-center font-thick text-gray-500 text-[20px] p-[15px] leading-tight">Luctus egestas augue undo ultrice aliquam in lacus congue dapibus</div>
+        <div class="pt-5 w-full flex justify-center">
+            <div class="flex flex-col lg:flex-row flex-wrap gap-4 md:gap-[4vw] justify-center items-center">
+                <div class="flex-1 bg-gray-200 h-auto w-[90%] md:w-[280px] rounded-lg p-5">
+                    <img src="https://martex.windstripedesign.ro/images/f_01.png" class="mx-auto">
+                    <div class="text-center font-bold text-[20px] md:text-[24px]">Intuitive dashboard</div>
+                    <div class="text-center text-gray-500 text-[16px] md:text-[20px] p-3 leading-tight">
+                        Luctus egestas augue undo ultrice aliquam in lacus congue dapibus
+                    </div>
                 </div>
-                <div class="flex-1  bg-gray-200 h-[380px] w-[280px] rounded-lg">
-                    <div class="p-[20px]"><img src="https://martex.windstripedesign.ro/images/f_05.png"></div>
-                    <div class="text-center font-bold text-[24px]">Effortless Integration</div>
-                    <div class="text-center font-thick text-gray-500 text-[20px] p-[15px] leading-tight">Tempor laoreet augue undo ultrice aliquam in lacusq luctus feugiat</div>
+                <div class="flex-1 bg-gray-200 h-auto w-[90%] md:w-[280px] rounded-lg p-5">
+                    <img src="https://martex.windstripedesign.ro/images/f_05.png" class="mx-auto">
+                    <div class="text-center font-bold text-[20px] md:text-[24px]">Effortless Integration</div>
+                    <div class="text-center text-gray-500 text-[16px] md:text-[20px] p-3 leading-tight">
+                        Tempor laoreet augue undo ultrice aliquam in lacusq luctus feugiat
+                    </div>
                 </div>
-                <div class="flex-1  bg-gray-200 h-[380px] w-[280px] rounded-lg">
-                    <div class="p-[20px]"><img src="https://martex.windstripedesign.ro/images/f_02.png"></div>
-                    <div class="text-center font-bold text-[24px]">Engagement Analysis</div>
-                    <div class="text-center font-thick text-gray-500 text-[20px] p-[15px] leading-tight">Egestas luctus augue undo ultrice aliquam in lacus feugiat cursus</div>
-
+                <div class="flex-1 bg-gray-200 h-auto w-[90%] md:w-[280px] rounded-lg p-5">
+                    <img src="https://martex.windstripedesign.ro/images/f_02.png" class="mx-auto">
+                    <div class="text-center font-bold text-[20px] md:text-[24px]">Engagement Analysis</div>
+                    <div class="text-center text-gray-500 text-[16px] md:text-[20px] p-3 leading-tight">
+                        Egestas luctus augue undo ultrice aliquam in lacus feugiat cursus
+                    </div>
                 </div>
-
             </div>
+        </div>
+    </div>
 
+    <!-- Smart Solutions Section -->
+    <div class="smartsolutions w-full p-[10px] flex flex-col lg:flex-row justify-center pt-[20px] lg:pt-[50px]">
+        <div class="smart-solutions-wrap w-full lg:w-[85vw] h-auto flex bg-[#ccc] rounded-lg p-[20px] lg:p-[50px] flex-col lg:flex-row">
+            <div class="smart-sol-data w-full lg:w-1/2 pt-[20px] lg:p-[20px]">
+                <h2 class="text-[30px] md:text-[37px] lg:text-[45px] font-semibold leading-none mb-[26px] text-[#343f4f]">
+                    Smart Solutions, real-time results
+                </h2>
+                <p class="text-[16px] md:text-[18px] lg:text-[20px] leading-tight mb-[19px] text-[#6c757d]">
+                    Sodales tempor sapien quaerat congue eget ipsum laoreet turpis neque auctor vitae eros dolor luctus placerat magna ligula cursus and purus pretium
+                </p>
+                <ul class="list-disc text-[16px] md:text-[18px] lg:text-[20px] mb-[18.5px] text-[#6c757d] ml-[15px]">
+                    <li>Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis sodales magna</li>
+                    <li>Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an ultrice ipsum aliquam congue</li>
+                </ul>
+            </div>
+            <div class="smart-sol-image w-full lg:w-1/2 flex justify-center items-center">
+                <img src="smart-sol.png" class="w-[100%] max-w-[300px] lg:max-w-[430px] h-auto lg:h-[450px] object-cover">
+            </div>
         </div>
     </div>
-    <div class="smartsolutions w-full lg:h-[630px] p-[10px] flex justify-center pt-[50px]">
-        <div class="smart-solutions-wrap w-full lg:w-[85vw] h-full flex bg-[#ccc] rounded-lg p-[35px] lg:p-[50px] flex-col-reverse lg:flex-row">
-        <div class="smart-sol-data h-full lg:w-1/2  pt-[20px] lg:p-[20px]">
-            <h2 class="smart-titlle text-[37px] lg:text-[45x] font-semibold lg:leading-none mb-[26px]">Smart Solutions, 
-                real-time results</h2>
-            <p class="text-[16px] lg:text-[20px] leading-tight mb-[19px] text-[#6c757d]">Sodales tempor sapien quaerat congue eget ipsum laoreet turpis neque auctor vitae eros dolor luctus placerat magna ligula cursus and purus pretium</p>
-            <ul class="list-disc text-[16px] lg:text-[20px] mb-[18.5px] text-[#6c757d]">
-                <li class="ml-[15px]">Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis sodales magna</li>
-                <li class="ml-[15px] ">Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an ultrice ipsum aliquam congue</li>
-            </ul>
+     <div class="flex md:flex-row flex-col  gap-[6vw] justify-center  md:m-20 m-5 rounded-2xl rounded-t-2xl">
+        <div class="flex-1 m-2 bg-gray-200 rounded-2xl">
+            <div class="text-3xl font-medium text-gray-900  bg-gray-200 text-center pb-2 pt-10 m-2">Multiple Accounts</div>
+            <div class="text-gray-700 text-center font-thin pb-5 m-2">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero
+    
+            </div>
+            <div>
+                <img src="https://martex.windstripedesign.ro/images/f_11.png">
+            </div>
+    
         </div>
-        <div class="smart-sol-image lg:w-1/2 h-full w-full flex justify-center items-center"><img src="smart-sol.png" class="lg:h-[450px] lg:w-[430px]"></div>
+        <div class="flex-1 bg-gray-200 rounded-2xl">
+            <div class="m-2 text-center pt-10"><img src="https://martex.windstripedesign.ro/images/f_04.png"></div>
+            <div class="text-3xl font-medium  bg-gray-200 text-center pb-5 pt-10 ml-2 mr-2 text-gray-900">Productivity Focussed</div>
+            <div class="text-gray-700 text-center font-thin pb-5 mr-2 ml-2">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero</div>
         </div>
-    </div>
-    <div class="Happy-customers bg-[#eee]"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center">Our Happy Customers</h1>
+    
+       </div>
+    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight">Our Happy Customers</h1>
         <p class="text-[#6c757d] text-[24px] text-center">Ligula risus auctor tempus magna feugiat lacinia.</p>
         <!-- Swiper -->
         <div class="swiper mySwiper md:w-[90vw] h-[500px]  p-[50px] bg-[#eee]">
@@ -188,9 +215,9 @@
         </div>
       </div>
       <div class="scroll-top"><button class="h-[50px] w-[50px] bg-[red] text-[white] rounded-lg hidden">T</button></div>
-        
 
 
+      
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
