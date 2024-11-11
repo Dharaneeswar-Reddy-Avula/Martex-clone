@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav h-[80px] w-full bg-[aliceblue] flex  items-center">
+             <div class="nav-center h-full w-full flex items-center">
+                <div class="nav-header h-full w-full flex justify-around items-center">
+                    <div class="logo">
+                        <img src="https://martex.windstripedesign.ro/images/logo-blue.png" class="h-[40px]">
+                    </div>
+                    <div class="nav-links hidden text-[#353f4f] lg:flex text-[18px] font-semibold  lg:gap-[25px]  h-full justify-center items-center">
+                        <a href="#about"class="hover:text-[black]">About <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                        <a href="#features" class="hover:text-[black]">Features</a>
+                        <a href="#pages" class="hover:text-[black]">Pages <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                        <a href="#pricing" class="hover:text-[black]">Pricing</a>
+                        <a href="#faqs" class="hover:text-[black]">FAQs</a>
+                       
+                </div>
+                <div class="signIn  md:flex md:justify-center md:items-center">
+                <div id="toggle-icon" class="nav-toggle text-[27px] text-[blue] lg:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <a href="#signIn" class="text-[#353f4f] text-[18px] font-semibold hover:text-[black] p-[20px] hidden md:block">Sign In</a>
+                <button class="text-[white] h-[50px] w-[200px] bg-[dodgerblue] font-semibold rounded-lg hover:bg-[#0345bf] hidden md:block">Get Started</button>
+             </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const toggleIconContainer = document.querySelector('#toggle-icon');
+        const toggleIcon = toggleIconContainer.querySelector('i');
+      
+        toggleIconContainer.addEventListener('click', function() {
+          if (toggleIcon.classList.contains('fa-bars')) {
+            toggleIcon.classList.remove('fa-bars');
+            toggleIcon.classList.add('fa-xmark');
+          } else {
+            toggleIcon.classList.remove('fa-xmark');
+            toggleIcon.classList.add('fa-bars');
+          }
+        });
+      </script>
+</body>
+
+</html>
+
