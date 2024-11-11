@@ -17,23 +17,80 @@
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-   
+    <style>
+       @keyframes optdisp {
+          from{
+            transform: translateY(-20px);
+            transition:all ease-in 5s ;
+          }
+          To{
+            transform: translateY(0px);
+          }
+       }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="nav h-[80px] w-full bg-[aliceblue] flex  items-center">
+    <header class="h-[100vh] w-full bg-[url('carousel.png')] bg-cover relative">
+        <nav class="nav h-[80px] w-full bg-transparent flex  items-center fixed">
              <div class="nav-center h-full w-full flex items-center">
                 <div class="nav-header h-full w-full flex justify-around items-center">
                     <div class="logo">
                         <img src="https://martex.windstripedesign.ro/images/logo-blue.png" class="h-[40px]">
                     </div>
                     <div class="nav-links hidden text-[#353f4f] lg:flex text-[18px] font-semibold  lg:gap-[25px]  h-full justify-center items-center">
-                        <a href="#about"class="hover:text-[black]">About <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                        <div class="relative group">
+                            <a href="#about" class="hover:text-[black]">About <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                            <div class="about-options h-[270px] w-[250px] bg-white hidden absolute top-[80px] left-[-100px] p-[10px] group-hover:block rounded-lg shadow-lg transition-opacity duration-300 ease-out"
+                              style="animation: optdisp 0.5s ease-out forwards;">
+                              <ul class="w-full h-full">
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Why Matrex?</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Integrations</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">How it works</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Best Solutions</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Testimonials</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          
                         <a href="#features" class="hover:text-[black]">Features</a>
+                        <div class="relative group">
                         <a href="#pages" class="hover:text-[black]">Pages <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                             <div class="pages-options w-[800px] h-[230px] bg-[white] hidden absolute rounded-lg top-[80px] left-[-300px] group-hover:block rounded-lg shadow-lg transition-opacity duration-300 ease-out" style="animation: optdisp 0.5s ease-out forwards;">
+                                <ul class="w-full h-full flex gap-3 text-[#353f4f]">
+                                    <div class="p-[20px] w-1/4">
+                                        <li class="p-[8px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] "><a href="#">About Us</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Our team</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Carrers</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">CareerDetails</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Contact Us</a></li>
+                                    </div>
+                                    <div class="p-[20px] w-1/4">
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Core features</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Our Projects</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Project details</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Testimonials</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Downloadpage</a></li>
+                                      </div>
+                                      <div class="p-[20px] w-1/4">
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Pricing Page#1</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Pricing Page#2</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">FAQsPage</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">HelpCenter</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">404 Page</a></li>
+                                      </div>
+                                      <div class="p-[20px] w-1/4">
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Blosting list</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Single Blog post</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">LoginPage</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">SignupPage</a></li>
+                                        <li class="p-[5px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue]"><a href="#">Integrations</a></li>
+                                      </div>
+                                </ul>
+                             </div>
+                        </div>
                         <a href="#pricing" class="hover:text-[black]">Pricing</a>
                         <a href="#faqs" class="hover:text-[black]">FAQs</a>
-                       
+                    
                 </div>
                 <div class="signIn  md:flex md:justify-center md:items-center">
                 <div id="toggle-icon" class="nav-toggle text-[27px] text-[blue] lg:hidden">
@@ -44,6 +101,7 @@
              </div>
             </div>
         </nav>
+     
     </header>
     <div class="w-full flex flex-col items-center pt-[20px] px-[10px]">
         <div class="text-[20px] md:text-[30px] lg:text-[60px] text-center font-bold text-[#343f4f] w-full max-w-[90%] lg:w-[900px] leading-none">
@@ -100,24 +158,24 @@
         </div>
     </div>
      <div class="flex md:flex-row flex-col  gap-[6vw] justify-center  md:m-20 m-5 rounded-2xl rounded-t-2xl">
-        <div class="flex-1 m-2 bg-gray-200 rounded-2xl">
-            <div class="text-3xl font-medium text-gray-900  bg-gray-200 text-center pb-2 pt-10 m-2">Multiple Accounts</div>
-            <div class="text-gray-700 text-center font-thin pb-5 m-2">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero
+        <div class="flex-1 m-2 bg-gray-200 rounded-2xl md:p-[20px]">
+            <div class="text-[24px] font-medium text-gray-900  bg-gray-200 text-center pb-2 pt-10 m-2">Multiple Accounts</div>
+            <div class="text-gray-700 text-center px-[20px] font-semibold md:px-[20px] text-[20px]">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero
     
             </div>
-            <div>
-                <img src="https://martex.windstripedesign.ro/images/f_11.png">
+            <div class="py-[40px]">
+                <img src="https://martex.windstripedesign.ro/images/f_11.png" >
             </div>
     
         </div>
         <div class="flex-1 bg-gray-200 rounded-2xl">
             <div class="m-2 text-center pt-10"><img src="https://martex.windstripedesign.ro/images/f_04.png"></div>
-            <div class="text-3xl font-medium  bg-gray-200 text-center pb-5 pt-10 ml-2 mr-2 text-gray-900">Productivity Focussed</div>
-            <div class="text-gray-700 text-center font-thin pb-5 mr-2 ml-2">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero</div>
+            <div class="text-[24px] font-medium  bg-gray-200 text-center pb-2 pt-10 ml-2 mr-2 text-gray-900">Productivity Focussed</div>
+            <div class="text-gray-700 text-center font-medium md:px-[20px] text-[20px] p-[10px]">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero</div>
         </div>
     
        </div>
-    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight">Our Happy Customers</h1>
+    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
         <p class="text-[#6c757d] text-[24px] text-center">Ligula risus auctor tempus magna feugiat lacinia.</p>
         <!-- Swiper -->
         <div class="swiper mySwiper md:w-[90vw] h-[500px]  p-[50px] bg-[#eee]">
