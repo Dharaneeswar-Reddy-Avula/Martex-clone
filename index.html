@@ -40,7 +40,7 @@
 </head>
 <body>
     <header class="h-[100vh] w-full bg-[url('carousel.png')] bg-cover relative">
-        <nav class="nav h-[80px] w-full bg-[white] flex  items-center fixed z-[100]">
+        <nav class="nav h-[80px] w-full bg-[white] flex  items-center fixed z-[50]">
              <div class="nav-center h-full w-full flex items-center relative">
                 <div class="nav-header h-full w-full flex justify-around items-center">
                     <div class="logo">
@@ -110,7 +110,7 @@
              </div>
             </div>  
         </nav> 
-        <div class="sidenav h-[100vh] w-full bg-[#00000080] opacity-0.5 absolute top-0 flex justify-end hidden lg:hidden shadow-lg transition-opacity duration-300 ease-out"style="animation: sidedisp 0.5s ease-out forwards;">
+        <div class="sidenav h-[100vh] w-full bg-[#00000080] opacity-0.5 absolute top-0 flex justify-end hidden lg:hidden shadow-lg transition-opacity duration-300 ease-out z-[100]"style="animation: sidedisp 0.5s ease-out forwards;">
             <div class="sidenav-options h-full w-[300px] bg-[dodgerblue] p-[25px] flex flex-col">
                <div class="close-btn w-full"><i class="fa fa-xmark text-[white] text-[32px] float-right"></i></div>
                <a href="#about" class="text-[white] text-[20px] w-full flex justify-between items-center p-[5px] font-bold">About <i class="fa fa-angle-right text-[white] py-[10px] text-[18px]"></i></a>
@@ -195,7 +195,7 @@
         </div>
     
        </div>
-    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg z-0"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
+    <div class="Happy-customers bg-[#eee] m-[10px] rounded-lg z-[0]"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
         <p class="text-[#6c757d] text-[24px] text-center">Ligula risus auctor tempus magna feugiat lacinia.</p>
         <!-- Swiper -->
         <div class="swiper mySwiper md:w-[90vw] h-[500px]  p-[50px] bg-[#eee]">
@@ -292,8 +292,58 @@
           <div class="swiper-pagination mt-[20px] text-center"></div>
         </div>
       </div>
-      <div class="scroll-top"><button class="h-[50px] w-[50px] bg-[red] text-[white] rounded-lg hidden">T</button></div>
-
+      <footer>
+        <hr>
+        <div class="flex flex-wrap w-full h-[270px] items-start md:gap-[30px] lg:gap-[90px] lg:py-[50px] lg:px-[100px] px-[20px] ">
+            <!-- Logo -->
+            <img src="https://martex.windstripedesign.ro/images/logo-blue.png" class="h-[40px] m-[10px] order-1 w-[200px] sm:w-auto">
+        
+            <!-- Connect With Us Section - Moved directly below logo on mobile view -->
+            <div class="p-2 text-black  sm:w-auto mt-[10px] order-2 sm:order-6 w-[210px] h-[150px]">
+                <p class="text-[#343f4f] font-semibold text-[20px] mb-[10px]">Connect With Us</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">hello@yourdomain.com</p>
+                <span class="flex gap-3 text-[#6c757d]">
+                    <i class="fa-brands fa-facebook text-[24px]"></i>
+                    <i class="fab fa-twitter text-[24px]"></i>
+                    <i class="fab fa-github text-[24px]"></i>
+                    <i class="fas fa-basketball-ball text-[24px]"></i>             
+                </span>
+            </div>
+        
+            <!-- Company Section -->
+            <div class="p-2 text-black  sm:w-auto order-3 w-[140px] h-[200px]">
+                <p class="text-[#343f4f] font-semibold text-[20px] mb-[5px]">Company</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">About Us</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Careers</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Okur Blog</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Contact Us</p>
+            </div>
+        
+            <!-- Product Section -->
+            <div class="p-2 text-black sm:w-auto order-4  w-[140px] h-[200px]">
+                <p class="text-[#343f4f] font-semibold text-[20px] mb-[5px]">Product</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Integration</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Customers</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Pricing</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Help Center</p>
+            </div>
+        
+            <!-- Legal Section -->
+            <div class="p-2 text-black sm:w-auto order-5  w-[140px] h-[200px]">
+                <p class="text-[#343f4f] font-semibold text-[20px] mb-[5px]">Legal</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Terms of Use</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Privacy Policy</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Cookie Policy</p>
+                <p class="text-[#6c757d] font-semibold text-[18px] mb-[5px]">Site Map</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-final text-[#6c757d] font-semibold text-[18px] w-full flex justify-around p-[20px]">
+            <p>&copy; 2023 Martex.All Rights Reserved</p>
+            <p>Made with <i class="fa-solid fa-heart text-[dodgerblue] text-[12px] font-bold"></i> by @ Windstripe Theme</p>
+        </div>
+        <hr>
+    </footer>
 
       
         <!-- Swiper JS -->
