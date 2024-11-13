@@ -33,5 +33,21 @@
         <div class="smart-sol-image lg:w-1/2 h-full w-full flex justify-center items-center"><img src="smart-sol.png" class="lg:h-[450px] lg:w-[430px]"></div>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const  smartsol_data= document.querySelector('.smart-sol-data');
+            const smartimg=document.querySelectorAll('.smart-sol-image');
+            var windowheight = window.innerHeight;
+            var revealtop = ourteam.getBoundingClientRect().top;
+            var revealpoint = 150;
+        
+            if (revealtop < windowheight - revealpoint) {
+                smartsol_data.classList.add('make-smartdata-active');
+            } else {
+                smartsol_data.classList.remove('make-smartdata-active');
+            }
+        });
+    </script>
 </body>
 </html>
