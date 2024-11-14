@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100&display=swap" rel="stylesheet">
+
+        <title>Achieve</title>
+       
+        <script>
+            tailwind.config = {
+                mode: 'jit',
+                theme: {
+                    extend: {},
+                },
+                variants: {},
+                plugins: [],
+            }
+        </script>
+        <style>
+            .tracking-img{
+                position: relative;
+                transform: translateY(100px);
+                opacity: 0; /* Start hidden */
+                transition: transform 2s ease, opacity 2s ease;
+                animation: reveal 2s ease-out 1s forwards;
+            }
+            
+            .tracking-img-reveal{
+                transform: translateY(0px);
+               opacity: 1;
+            }
+            
+            @keyframes reveal {
+                from {
+                    transform: translateY(100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="Tracking w-full h-[600px] py-[30px]">
+            <p class="flex justify-center items-center text-4xl lg:text-6xl md:text-4xl text-center font-bold pl-0 pr-0 md:pl-40 lg:pl-40  md:pr-40 lg:pr-40 pt-10 text-gray-700 tracking-wide md:tracking-wider">Track the progress towards objectives with key results</p>
+            <p class="flex justify-center items-center  text-center text-lg lg:text-2xl md:text-md  text-gray-500 pl-2 pr-2 md:pl-50 lg:pl-40 md:pr-50 lg:pr-40 pt-5 tracking-tight">Ligula risus auctor tempus magna feugiat lacinia.</p>
+            <div class="tracking-img flex w-full justify-center items-center  text-center  pt-16 pl-3 lg:pl-20 md:pl-2  pr-3 md:pr-2 lg:pr-20">
+                <div class="relative inline-block flex justify-center items-center text-center w-full">
+                    <img src="https://martex.windstripedesign.ro/images/dashboard-02.png" class="w-full">
+                    <i class="fa-solid fa-circle-play text-[30px] md:text-[50px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transiton-transform duration-200 hover:scale-90 mb-5 mt-3 mr-3 ml-3" style="color: #268ddb;"></i>
+                </div>   
+            </div>
+        </div>
+        <script>
+            const Tracking = document.querySelector('.Tracking');
+            const tracking_img = document.querySelector('.tracking-img');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+            window.addEventListener('scroll', function () {
+            const revealTop = Tracking.getBoundingClientRect().top;
+            if (revealTop < windowHeight - revealPoint) {
+                tracking_img.classList.add('tracking-img-reveal');//digital marketing      
+            } 
+            else {
+                tracking_img.classList.remove('tracking-img-reveal');    
+            }
+            });
+        </script>
+
+    </body>

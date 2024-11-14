@@ -42,26 +42,38 @@
     transform: translateX(0px);
     opacity: 1;
 }
-@keyframes reveal2 {
-    from {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+
+.smart-sol-data-reveal{
+    transform: translateX(0px);
+    opacity: 1;
 }
-@keyframes reveal3 {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
+
+    
+    @keyframes reveal2 {
+        from {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
     }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
+    
+    @keyframes reveal3 {
+        from {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
     }
-}
+
+
+/*Achievements*/
+
 
 /*mutliple accounts animation*/
 
@@ -90,3 +102,18 @@ transform: translateY(0px);
 transform: translateY(0px);
    opacity: 1;
 }
+
+/*tracking*/
+.tracking-img{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0; /* Start hidden */
+    transition: transform 2s ease, opacity 2s ease;
+    animation: reveal 2s ease-out 1s forwards;
+}
+
+.tracking-img-reveal{
+    transform: translateY(0px);
+   opacity: 1;
+}
+

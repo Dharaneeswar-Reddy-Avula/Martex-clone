@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100&display=swap" rel="stylesheet">
+
+        <title>Achieve</title>
+       
+        <script>
+            tailwind.config = {
+                mode: 'jit',
+                theme: {
+                    extend: {},
+                },
+                variants: {},
+                plugins: [],
+            }
+        </script>
+        <style>
+            .achieve-img{
+                position: relative;
+                transform: translateX(100px);
+                opacity: 0; /* Start hidden */
+                transition: transform 2s ease-out, opacity 2s ease;
+                animation: reveal2 1s ease-out 1s forwards;
+            }
+            .achieve-cont{
+                position: relative;
+                transform: translateX(-100px);
+                opacity: 0; /* Start hidden */
+                transition: transform 2s ease-out, opacity 2s ease;
+                animation: reveal3 1s ease-out 1s forwards;
+            }
+            
+            .achieve-img-reveal{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            .achieve-cont-reveal{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            @keyframes reveal2 {
+                from {
+                    transform: translateX(100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+            @keyframes reveal3 {
+                from {
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+            
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="Achievements w-full flex flex-col lg:flex-row lg:justify-center xl:px-[100px] lg:py-[50px]">
+            <div class="achieve-img h-full w-full  flex-1 md:flex md:flex-col md:items-center">
+                <p><img src="https://martex.windstripedesign.ro/images/img-05.png"class="lg:h-[600px] w-full"></p>
+            </div>
+            <div class="achieve-cont flex-1 h-full w-full  px-3 lg:pl-0 md:pl-0 pt-0 md:pt-0 lg:pt-10 mr-0">
+                <p class="text-[40px] leading-none  md:text-4xl lg:text-6xl font-semibold pt-4 text-[#343f4f]">Achieve more with better workflows</p>
+                <p class="text-[#6c757d] pt-10 lg:pr-[70px]"style="font-family: 'Plus Jakarta Sans', sans-serif;">Sodales tempor sapien quaerat ipsum undo congue laoreet turpis neque auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit</p>
+                <p class="pt-5 text-3xl font-semibold text-[#343f4f] "style="font-family: 'Plus Jakarta Sans', sans-serif;">Get more done in less time</p>
+                <div class="pt-4 text-[#6c757d] flex flex-row items-center" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <i class="fa-solid fa-check text-blue-500 pr-2 font-bold"></i>Magna dolor luctus at egestas sapien
+                </div>
+                <p class="pt-4 text-[#6c757d] flex items-start" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <i class="fa-solid fa-check text-blue-500 pr-2 font-bold"></i>Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis and ultrice magnis
+                </p>
+                <p class="pt-4 text-[#6c757d] flex items-start" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <i class="fa-solid fa-check font-bold text-[dodgerblue] pr-2 "></i>Volute turpis dolores and sagittis congue
+                </p>
+                
+                <p class="cursor-pointer text-blue-500 pt-2 font-bold text-xl">All-in-one platform 
+                    <span class="text-sm">
+                        <i class="fa-solid fa-chevron-right h-2 w-2"></i>
+                    </span></p>
+            </div>
+
+        </div>
+
+        <script>
+            const Achievements=document.querySelector('.Achievements');
+const achieve_img =document.querySelector('.achieve-img');
+const achieve_cont =document.querySelector('.achieve-cont');
+window.addEventListener('scroll', function () {
+    const revealTop = Achievements.getBoundingClientRect().top;
+    if (revealTop < windowHeight - revealPoint) {
+        achieve_img.classList.add('achieve-img-reveal');//smart-sol
+        achieve_cont.classList.add('achieve-cont-reveal');//smart-sol
+
+    } 
+    else {
+        achieve_img.classList.remove('achieve-img-reveal');
+        achieve_cont.classList.remove('achieve-cont-reveal');//smart-sol
+    }
+});
+        </script>
+    </body>
+    </html>

@@ -47,3 +47,17 @@ window.addEventListener('scroll', function () {
         productivity.classList.add('productivity-reveal');
     }
 });
+
+/* tracking*/
+const Tracking = document.querySelector('.Tracking');
+const tracking_img = document.querySelector('.tracking-img');
+
+window.addEventListener('scroll', function () {
+const revealTop = Tracking.getBoundingClientRect().top;
+if (revealTop < windowHeight - revealPoint) {
+    tracking_img.classList.add('tracking-img-reveal');//digital marketing      
+} 
+else {
+    tracking_img.classList.remove('tracking-img-reveal');    
+}
+});
