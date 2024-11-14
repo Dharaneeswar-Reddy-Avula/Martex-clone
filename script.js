@@ -1,3 +1,14 @@
+/*nav toggle*/
+const closebutton=document.querySelector(".close-btn");
+const sidenav=document.querySelector('.sidenav')
+const toggleIcon=document.querySelector("#toggle-icon");
+toggleIcon.addEventListener('click',function(){
+    sidenav.style.display="flex";       
+});
+closebutton.addEventListener('click',function(){
+    sidenav.style.display="none";       
+});
+
 /*digital marketing animation*/
 
 const digitalMark = document.querySelector('.digital-mark');
@@ -61,3 +72,53 @@ else {
     tracking_img.classList.remove('tracking-img-reveal');    
 }
 });
+/*simplify*/
+const simplify=document.querySelector('.simplify');
+const simplify_cont =document.querySelector('.simplify-cont');
+const simplify_img =document.querySelector('.simplify-img');
+window.addEventListener('scroll', function () {
+    const revealTop = simplify.getBoundingClientRect().top;
+    if (revealTop < windowHeight - revealPoint) {
+        simplify_cont.classList.add('simplify-cont-reveal');
+        smart_sol_img.classList.add('simplify-img-reveal');
+
+    } 
+    else {
+        simplify_cont.classList.remove('simplify-cont-reveal');
+        smart_sol_img.classList.remove('simplify-img-reveal');
+    }
+});
+
+/*happy customers*/
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    loop: true,
+    autoplay: {
+     delay: 3000, // Delay between slides (3 seconds)
+     disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: "bullets",
+      dynamicBullets: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    breakpoints: {
+      // When the screen width is 1200px or more
+      1200: {
+        slidesPerView:3, // 3 slides visible
+      },
+      // When the screen width is between 768px and 1199px
+      1024: {
+        slidesPerView: 2, // 2 slides visible
+      },
+      // When the screen width is 767px or less
+      0: {
+        slidesPerView: 1, // 1 slide visible
+      },
+    },
+  });

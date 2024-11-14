@@ -116,4 +116,51 @@ transform: translateY(0px);
     transform: translateY(0px);
    opacity: 1;
 }
-
+/*simplify*/
+   .simplify-cont{
+                position: relative;
+                transform: translateX(100px);
+                opacity: 0; /* Start hidden */
+                transition: transform 2s ease-out, opacity 2s ease;
+                animation: reveal4 1s ease-out 1s forwards;
+            }
+            .simplify-img{
+                position: relative;
+                transform: translateX(-100px);
+                opacity: 0; /* Start hidden */
+                transition: transform 2s ease-out, opacity 2s ease;
+                animation: reveal5 1s ease-out 0.5s forwards;
+            }
+            
+            .simplify-img-reveal{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            
+            .simplify-cont-reveal{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            
+                
+                @keyframes reveal4 {
+                    from {
+                        transform: translateX(-70px);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes reveal5 {
+                    from {
+                        transform: translateX(70px);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                }

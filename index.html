@@ -18,7 +18,6 @@
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
    
 </head>
 <body>
@@ -187,6 +186,33 @@
                 <i class="fa-solid fa-circle-play text-[30px] md:text-[50px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transiton-transform duration-200 hover:scale-90 mb-5 mt-3 mr-3 ml-3" style="color: #268ddb;"></i>
             </div>   
         </div>
+    </div>
+    <!--simplify-->
+    <div class="simplify w-full flex flex-col md:flex-col  lg:flex-row m-0  gap-2 md:gap-0 lg:gap-[50px] p-[5px] xl:mx-[100px]">
+        <div class="simplify-img h-full w-full   flex justify-center lg:justify-start items-center lg:pt-[80px] p-[10px]">
+            <p><img src="https://martex.windstripedesign.ro/images/img-07.png"class="h-full lg:h-[600px] md:h-full"></p>
+        </div>
+        <div class="simplify-cont h-full  pl-6 lg:pl-0 md:pl-0 pt-0 md:pt-0 lg:pt-20 mr-0 md:mr-20 lg:mr-40">
+            <p class="text-4xl  md:text-5xl lg:text-5xl font-bold  text-gray-600 pr-4 lg:pr-6 md:pr-0">Simplify your work, amplify productivity</p>
+            <p class="text-gray-500 text-medium lg:text-xl md:text-2xl pt-10 pr-0 md-pr-24 lg:pr-24">Sodales tempor sapien quaerat ipsum undo congue laoreet turpis neque auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit</p>
+            <p class="pt-5 text-3xl md:text-5xl lg:text-3xl font-bold text-gray-600">The smarter way to work</p>
+            <div class="pt-4 text-[#6c757d] flex flex-row items-start" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                <i class="fa-solid fa-check text-blue-500 pr-2 font-bold"></i>Magna dolor luctus at egestas sapien
+            </div>
+            <p class="pt-4 text-[#6c757d] flex items-start" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                <i class="fa-solid fa-check text-blue-500 pr-2 font-bold"></i>Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis and ultrice magnis
+            </p>
+            <p class="pt-4 text-[#6c757d] flex items-start" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                <i class="fa-solid fa-check font-bold text-[dodgerblue] pr-2 "></i>Volute turpis dolores and sagittis congue
+            </p>
+            
+            <p class="cursor-pointer text-blue-500 pt-2 font-bold text-xl">All-in-one platform 
+                <span class="text-sm">
+                    <i class="fa-solid fa-chevron-right h-2 w-2"></i>
+
+                </span></p>
+        </div>
+
     </div>
        <!--happy customers-->
     <div class="Happy-customers bg-[#f4f4f9] m-[10px] rounded-lg z-[0] py-[30px] rounded-lg"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
@@ -425,56 +451,8 @@
     <!--footer-->
 
       
-        <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      
-        <!-- Initialize Swiper -->
-        <script>
-           
-        const closebutton=document.querySelector(".close-btn");
-        const sidenav=document.querySelector('.sidenav')
-        const toggleIcon=document.querySelector("#toggle-icon");
-        toggleIcon.addEventListener('click',function(){
-            sidenav.style.display="flex";       
-        });
-        closebutton.addEventListener('click',function(){
-            sidenav.style.display="none";       
-        });
-       
-
-          var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 50,
-            loop: true,
-            autoplay: {
-             delay: 3000, // Delay between slides (3 seconds)
-             disableOnInteraction: false,
-            },
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-              type: "bullets",
-              dynamicBullets: true,
-              renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + '</span>';
-              },
-            },
-            breakpoints: {
-              // When the screen width is 1200px or more
-              1200: {
-                slidesPerView:3, // 3 slides visible
-              },
-              // When the screen width is between 768px and 1199px
-              1024: {
-                slidesPerView: 2, // 2 slides visible
-              },
-              // When the screen width is 767px or less
-              0: {
-                slidesPerView: 1, // 1 slide visible
-              },
-            },
-          });
+        <script src="script.js"></script>
         
-        </script>
 </body>
 </html>
