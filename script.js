@@ -72,6 +72,36 @@ else {
     tracking_img.classList.remove('tracking-img-reveal');    
 }
 });
+/*company*/
+var swiper = new Swiper(".mySwiper-company", { 
+    slidesPerView: 5,
+    loop: true,
+    spaceBetween: 95,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1200: {
+          slidesPerView:5, 
+        },
+        1024: {
+          slidesPerView: 4, 
+        },
+      
+        768: {
+          slidesPerView: 3, 
+        },
+        540:{
+            slidesPerView:2,
+        },
+        0:{
+            slidesPerView:1,              
+        }
+      },
+   
+});
+
 /*simplify*/
 const simplify=document.querySelector('.simplify');
 const simplify_cont =document.querySelector('.simplify-cont');
