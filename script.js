@@ -9,7 +9,7 @@ toggleIcon.addEventListener('click',function(){
 closebutton.addEventListener('click',function(){
     sidenav.style.display="none";       
 });
-const revealPoint = 150; 
+const revealPoint = 180; 
 const windowHeight = window.innerHeight;
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector('.nav');
@@ -123,21 +123,21 @@ var swiper = new Swiper(".mySwiper-company", {
 });
 
 /*simplify*/
-const simplify=document.querySelector('.simplify');
-const simplify_cont =document.querySelector('.simplify-cont');
-const simplify_img =document.querySelector('.simplify-img');
-window.addEventListener('scroll', function () {
-    const revealTop = simplify.getBoundingClientRect().top;
-    if (revealTop < windowHeight - revealPoint) {
-        simplify_cont.classList.add('simplify-cont-reveal');
-        smart_sol_img.classList.add('simplify-img-reveal');
+    const simplify=document.querySelector('.simplify');
+    const simplify_cont =document.querySelector('.simplify-cont');
+    const simplify_img =document.querySelector('.simplify-img');
+    window.addEventListener('scroll', function () {
+        const revealTop = simplify.getBoundingClientRect().top;
+        if (revealTop < windowHeight - revealPoint) {
+            simplify_cont.classList.add('simplify-cont-reveal');
+            smart_sol_img.classList.add('simplify-img-reveal');
 
-    } 
-    else {
-        simplify_cont.classList.remove('simplify-cont-reveal');
-        smart_sol_img.classList.remove('simplify-img-reveal');
-    }
-});
+        } 
+        else {
+            simplify_cont.classList.remove('simplify-cont-reveal');
+            smart_sol_img.classList.remove('simplify-img-reveal');
+        }
+    });
 
 /*happy customers*/
 var swiper = new Swiper(".mySwiper", {
