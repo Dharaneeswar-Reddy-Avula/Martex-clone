@@ -78,6 +78,55 @@ window.addEventListener('scroll', function () {
         productivity.classList.add('productivity-reveal');
     }
 });
+/*counter*/
+document.addEventListener('DOMContentLoaded',function(){
+    const countElement = document.querySelector('.count-1');
+    let count = 0;
+    const limit = 89;
+    const intervalDuration = 40; // milliseconds
+  
+    const intervalId = setInterval(function() {
+        count++;
+        countElement.textContent = count + "K";
+  
+        if (count >= limit) {
+            clearInterval(intervalId);
+        }
+    }, intervalDuration);
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const countElement = document.querySelector('.count-2');
+    let count = 0;
+    const limit = 76;
+    const intervalDuration = 30; // milliseconds
+  
+    const intervalId = setInterval(function() {
+        count++;
+        countElement.textContent = count + "%";
+  
+        if (count >= limit) {
+            clearInterval(intervalId);
+        }
+    }, intervalDuration);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const countElement = document.querySelector('.count-3');
+    let count = 0;
+    const limit =4;
+    const intervalDuration = 1000; // milliseconds
+  
+    const intervalId = setInterval(function() {
+        count++;
+        countElement.textContent = count + ".93";
+  
+        if (count >= limit) {
+            clearInterval(intervalId);
+        }
+    }, intervalDuration);
+   });
+
+
 
 /* tracking*/
 const Tracking = document.querySelector('.Tracking');

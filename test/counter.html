@@ -18,6 +18,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <div class="counter w-full flex font-semibold flex-wrap gap-[15px] lg:gap-[20px] xl:justify-center py-[70px]">
+        <div class="counter-1 md:w-[350px]">
+            <div class="flex items-center"><h5 class="count-1 text-[#353f4f] text-[30px] md:text-[60px] pr-[25px] md:pr-[50px]">0K</h5><p class="text-[#6c757d] text-[18px] leading-none">Porta justo integer and velna vitae auctor</p></div>
+        </div>
+        <div class="counter-2 md:w-[300px]">
+            <div class="flex  items-center"><h5 class="count-2 text-[#353f4f] text-[30px] pr-[20px] md:text-[60px] md:pr-[40px]">0%</h5><p class="text-[#6c757d] text-[18px] leading-none">Ligula magna suscipit vitae and rutrum</p></div>
+        </div>
+        <div class="counter-3 md:w-[300px]">
+            <div class="flex items-center"><h5 class="count-3 text-[#353f4f] text-[30px] pr-[20px] md:text-[60px] md:pr-[40px]">0%</h5><p class="text-[#6c757d] text-[18px] leading-none">Sagittis congue augue egestas an egestas</p></div>
+        </div>
+        
+    </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const countElement = document.querySelector('.count-1');
+        let count = 0;
+        const limit = 89;
+        const intervalDuration = 40; // milliseconds
+      
+        const intervalId = setInterval(function() {
+            count++;
+            countElement.textContent = count + "K";
+      
+            if (count >= limit) {
+                clearInterval(intervalId);
+            }
+        }, intervalDuration);
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        const countElement = document.querySelector('.count-2');
+        let count = 0;
+        const limit = 76;
+        const intervalDuration = 50; // milliseconds
+      
+        const intervalId = setInterval(function() {
+            count++;
+            countElement.textContent = count + "%";
+      
+            if (count >= limit) {
+                clearInterval(intervalId);
+            }
+        }, intervalDuration);
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        const countElement = document.querySelector('.count-3');
+        let count = 0;
+        const limit =4;
+        const intervalDuration = 1000; // milliseconds
+      
+        const intervalId = setInterval(function() {
+            count++;
+            countElement.textContent = count + ".93";
+      
+            if (count >= limit) {
+                clearInterval(intervalId);
+            }
+        }, intervalDuration);
+      });
+
+    </script>
 </html>

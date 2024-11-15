@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="plug flex flex-col md:flex-col lg:flex-row bg-gray-200 lg:flex-row-reverse p-[10px] md:p-[30px] md:items-center">
+      
+    <div class="plug-img lg:w-1/2 flex items-center">
+      <img src="https://martex.windstripedesign.ro/images/img-02.png" class="w-full md:w-[400px] lg:w-full">
+    </div>
+    
+    <div class="plug-cont lg:w-1/2 flex-1 md:p-[50px]">
+      <p class="text-[30px] md:text-[50px] xl:text-[60px] font-bold text-[#353747] leading-tight">
+        Plug your essential tools in a few clicks
+      </p>
+      <ul class="list-disc pt-5 font-thick text-md lg:text-md md:text-xl text-[#6c757d] pl-5">
+        <li class="pt-2 md:pt-5">
+          Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis sodales magna undo aoreet primis
+        </li>
+        <li class="pt-5">
+          Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an ultrice ipsum aliquam undo congue dolor cursus purus congue and ipsum purus sapien a blandit
+        </li>
+      </ul>
+      <p class="text-blue-500 cursor-pointer text-xl font-medium pt-[20px] text-left" style="color:rgb(26, 142, 238)">
+        Explore all integrations <i class="fa-solid fa-chevron-right text-sm pl-2"></i>
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
