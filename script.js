@@ -1,4 +1,5 @@
 /*nav toggle*/
+
 const closebutton=document.querySelector(".close-btn");
 const sidenav=document.querySelector('.sidenav')
 const toggleIcon=document.querySelector("#toggle-icon");
@@ -8,13 +9,32 @@ toggleIcon.addEventListener('click',function(){
 closebutton.addEventListener('click',function(){
     sidenav.style.display="none";       
 });
+const revealPoint = 150; 
+const windowHeight = window.innerHeight;
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector('.nav');
+    if (!nav) return; 
+    const triggerHeight = 80; 
+    window.addEventListener("scroll", function () {
+        const scrollHeight = window.pageYOffset;
+        if (scrollHeight > triggerHeight) {
+            nav.classList.add("nav-add");
+        } else {
+            nav.classList.remove("nav-add");
+        }
+    });
+});
+
+
+
+
+
 
 /*digital marketing animation*/
 
 const digitalMark = document.querySelector('.digital-mark');
 const digitalMarkBox = document.querySelector('.digital-mark-box');
-const windowHeight = window.innerHeight;
-const revealPoint = 150;
+
 window.addEventListener('scroll', function () {
     const revealTop = digitalMark.getBoundingClientRect().top;
     if (revealTop < windowHeight - revealPoint) {

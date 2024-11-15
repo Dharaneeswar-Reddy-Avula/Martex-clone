@@ -18,19 +18,52 @@
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-   
+   <style>
+    .nav {
+        transition: background-color 0.5s ease; /* Smooth transition for background color */
+        background-color: transparent;
+    }
+    
+    .nav.nav-add {
+        animation: navappear 1s forwards;
+        background-color: white; /* Final background color on scroll */
+    }
+    
+    @media(min-width:620px){
+    @keyframes navappear {
+        from {
+            height: 100px;
+        }
+        to {
+            height: 80px;
+        }
+    }
+}
+@media(max-width:620px){
+    @keyframes navappear {
+        from {
+            height: 0px;
+        }
+        to {
+            height: 80px;
+        }
+    }
+}
+ 
+    
+   </style>
 </head>
 <body >
     <!--header-->
-    <header class="h-[100vh] w-full bg-[url('carousel.png')] bg-cover relative">
-        <nav class="nav h-[80px] w-full bg-[white] flex  items-center fixed z-[50]">
+    <header class="h-[700px] lg:h-[100vh] w-full bg-[url('carousel.png')] bg-cover relative">
+        <nav class="nav h-[80px] lg:h-[100px] w-full bg-transparent flex  items-center fixed z-[50]">
              <div class="nav-center h-full w-full flex items-center relative">
                 <div class="nav-header h-full w-full flex justify-around items-center">
                     <div class="logo">
                         <img src="https://martex.windstripedesign.ro/images/logo-blue.png" class="h-[40px]">
                     </div>
                     <div class="nav-links hidden text-[#353f4f] lg:flex text-[18px] font-semibold  lg:gap-[25px]  h-full justify-center items-center">
-                        <div class="relative group">
+                        <div class="about-wrap relative group">
                             <a href="#about" class="hover:text-[black]">About <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
                             <div class="about-options h-[270px] w-[250px] bg-white hidden absolute top-[80px] left-[-100px] p-[10px] group-hover:block rounded-lg shadow-lg transition-opacity duration-300 ease-out"
                               style="animation: optdisp 0.5s ease-out forwards;">
@@ -45,7 +78,7 @@
                           </div>
                           
                         <a href="#features" class="hover:text-[black]">Features</a>
-                        <div class="relative group">
+                        <div class="pages-wrap relative group">
                         <a href="#pages" class="hover:text-[black]">Pages <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
                              <div class="pages-options w-[800px] h-[230px] bg-[white] hidden absolute rounded-lg top-[80px] left-[-300px] group-hover:block rounded-lg shadow-lg transition-opacity duration-300 ease-out" style="animation: optdisp 0.5s ease-out forwards;">
                                 <ul class="w-full h-full flex gap-3 text-[#353f4f]">
@@ -103,10 +136,29 @@
                <a href="#testimonials" class="text-[white] text-[20px] w-full flex justify-between items-center p-[5px] font-bold">Testimonials</a>
             </div>
     
-        </div>    
+        </div>  
+        <div class="get-started-top flex justify-center items-center pt-10 absolute bottom-[-100px] md:bottom-[100px] lg:bottom-[-100px]  px-[10px] lg:right-[50px] md:px-[30px]">
+            <div class="lg:w-[450px] lg:h-[550px] p-10 rounded-md bg-white">
+                <p class="w-[170px] h-[160px] absolute">
+                    <img src="https://martex.windstripedesign.ro/images/logo-blue.png" alt="Martex Logo">
+                </p>
+                <p class="text-3xl pt-16 font-bold text-gray-700">Achieve success through data-driven decisions</p>
+                <p class="pt-4 text-xl text-gray-500">Get started with Martex for free. It's fast and very easy! No credit card needed</p>
+                <p class="pt-4 pr-4">
+                    <input type="text" placeholder="Name" class="uuname placeholder-gray-600 w-full h-[60px] pl-2 bg-gray-100 rounded-md focus:outline-[dodgerblue] focus:bg-[white]">
+                </p>
+                <p class="pt-4 pr-4">
+                    <input type="text" placeholder="Email" class="uemail placeholder-gray-600 w-full h-[60px] pl-2 bg-gray-100 rounded-md focus:outline-[dodgerblue] focus:bg-[white]">
+                </p>
+                <p class="text-white font-bold pt-4 pr-4">
+                    <button type="button" class="bg-blue-500 w-full h-[60px] rounded-md">Get started Now</button>
+                </p>
+            </div>
+        </div>
+       
     </header>
   <!--Digital MARKETING-->
- <div class="digital-mark w-full flex flex-col items-center py-[100px] px-[10px]">
+  <div class="digital-mark w-full flex flex-col items-center py-[100px] px-[10px]">
         <div class="text-[25px] md:text-[30px] lg:text-[60px] text-center font-bold text-[#343f4f] w-full max-w-[90%] lg:w-[900px] md:leading-none">
             Digital marketing that drives results for your business
         </div>
@@ -141,7 +193,7 @@
     </div>
 
     <!-- Smart Solutions Section -->
-    <div class="smartsolutions w-full lg:h-[630px] p-[10px] flex justify-center pt-[50px] ">
+    <!-- <div class="smartsolutions w-full lg:h-[630px] p-[10px] flex justify-center pt-[50px] ">
         <div class="smart-solutions-wrap w-full lg:w-[85vw] h-full flex bg-[#f4f4f9] rounded-lg p-[35px] lg:p-[50px] flex-col-reverse lg:flex-row ">
         <div class="smart-sol-data h-full lg:w-1/2  pt-[20px] lg:p-[20px]">
             <h2 class="smart-title text-[37px] lg:text-[45x] font-semibold lg:leading-none mb-[26px] text-[#343f4f]">Smart Solutions, 
@@ -154,7 +206,7 @@
         </div>
         <div class="smart-sol-image lg:w-1/2 h-full w-full flex justify-center items-center"><img src="smart-sol.png" class="lg:h-[450px] lg:w-[430px]"></div>
         </div>
-    </div>
+    </div> -->
   <!--achievements-->
   <!-- <div class="Achievements lg:h-[600px] w-full flex flex-col md:flex-col  lg:flex-row m-0 gap-2 md:gap-0  p-[5px] ">
     <div class="achieve-img h-full w-full  lg:w-1/2 flex justify-center lg:justify-end items-center lg:pt-[80px] p-[10px]">
@@ -182,7 +234,7 @@
     </div>
 
 </div> -->
-<div class="Achievements lg:h-[600px] w-full flex flex-col lg:flex-row gap-2 p-2">
+<!-- <div class="Achievements lg:h-[600px] w-full flex flex-col lg:flex-row gap-2 p-2">
     <div class="achieve-img h-full w-full lg:w-1/2 flex justify-center lg:justify-end items-center lg:pt-[80px] p-4">
         <img src="https://martex.windstripedesign.ro/images/img-05.png" class="h-full lg:h-[600px] object-contain" alt="Achievement Image">
     </div>
@@ -210,11 +262,11 @@
             <span class="text-sm"><i class="fa-solid fa-chevron-right"></i></span>
         </p>
     </div>
-</div> 
+</div>  -->
 
 
 <!--muultiple accounts-->
-     <div class="mutliple-acc w-full flex md:flex-row flex-col  gap-[6vw] justify-center px-[10px] rounded-2xl rounded-t-2xl md:px-[100px]  py-[30px] lg:py-[100px]">
+     <div class="mutliple-acc w-full flex md:flex-row flex-col  gap-[6vw] justify-center px-[10px] rounded-2xl rounded-t-2xl lg:px-[100px]  py-[30px] lg:py-[100px]">
         <div class="multiple-div lg:w-1/2 bg-[#f4f4f9] rounded-2xl md:p-[20px]">
             <div class="text-[24px] font-medium text-[#343f4f]  bg-[#f4f4f9] text-center pb-2 pt-10 m-2">Multiple Accounts</div>
             <div class="text-[#6c757d] text-center px-[20px] font-semibold md:px-[20px] text-[20px]">Aliquam a augue suscipit luctus diam neque purus ipsum neque and dolor primis libero
@@ -259,6 +311,45 @@
             </div>
         </div>
     </div>
+    <!--easy integrate-->
+    <div class="easyintegrate w-full flex justify-center items-center p-4 lg:p-[100px] ">
+        <div class="easyintegrate-1 flex flex-col items-center h-full lg:w-full lg:h-[600px] bg-[#f4f4f9] text-center rounded-md">
+            <div class="lg:w-[700px]">
+                <p class="text-4xl md:text-5xl lg:text-[60px] font-bold text-[#353f4f] p-[30px]">
+                    Easy integrate all your essential tools
+                </p>
+                <p class="text-[#6c757d] text-xl pb-[10px]">
+                    Ligula risus auctor tempus magna feugiat lacinia
+                </p>
+            </div>
+            <div class="easyintegrate-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 px-2 md:pl-4 pt-2 md:pt-6 h-full lg:py-[50px]">
+                <div class="flex flex-col items-center  ">
+                    <p class="bg-white rounded-md lg:p-12 md:pr-24 md:pl-24 md:pt-12 md:pb-12 pr-24 pl-24 pb-12 pt-12"><img src="https://martex.windstripedesign.ro/images/png_icons/tool-1.png" class="w-16 h-16"></p>
+                    <p class="pt-2 font-bold text-gray-500">Zapier</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <p class="bg-white rounded-md lg:p-12 p-12 md:pr-24 md:pl-24 md:pt-12 md:pb-12 pr-24 pl-24 pb-12 pt-12"><img src="https://martex.windstripedesign.ro/images/png_icons/tool-2.png" class="w-16 h-16"></p>
+                    <p class="pt-2 font-bold text-gray-500">Google Analytics</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="bg-white rounded-md lg:p-12 p-12 md:pr-24 md:pl-24 md:pt-12 md:pb-12 pr-24 pl-24 pb-12 pt-12"><img src="https://martex.windstripedesign.ro/images/png_icons/tool-3.png" class="w-16 h-16"></p>
+                    <p class="pt-2 font-bold text-gray-500">Amplitude</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <p class="bg-white rounded-md lg:p-12 p-12 md:pr-24 md:pl-24 md:pt-12 md:pb-12 pr-24 pl-24 pb-12 pt-12"><img src="https://martex.windstripedesign.ro/images/png_icons/tool-4.png" class="w-16 h-16"></p>
+                    <p class="pt-2 font-bold text-gray-500">Hubspot</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <p class="bg-white rounded-md lg:p-12 p-12 md:pr-24 md:pl-24 md:pt-12 md:pb-12 pr-24 pl-24 pb-12 pt-12"><img src="https://martex.windstripedesign.ro/images/png_icons/tool-5.png" class="w-16 h-16"></p>
+                    <p class="pt-2 font-bold text-gray-500">MailChimp</p>
+                </div>
+            </div>
+            <div class="button-1 p-[30px]">
+                <button type="button" class="border border-2 border-gray-500 pt-2 pb-2 pl-8 pr-8 rounded-md hover:bg-blue-500">View all integrations</button>
+            </div>
+        </div>
+
+    </div>
     <!--solution-->
     <div class="flex flex-col md:flex-col lg:flex-row w-full h-full lg:gap-[50px]">
         <div class="Solutions h-full w-full  lg:w-1/2 pt-10 pt-24 pb-10 md:pt-10 md:pl-24 md:pb-5 lg:pt-20 flex justify-center lg:items-end">
@@ -281,7 +372,7 @@
 
     </div>
     <!--simplify-->
-   <div class="simplify w-full flex flex-col md:flex-col  lg:flex-row m-0  gap-2 md:gap-0 lg:gap-[50px] p-[5px] xl:px-[100px] ">
+   <!-- <div class="simplify w-full flex flex-col md:flex-col  lg:flex-row m-0  gap-2 md:gap-0 lg:gap-[50px] p-[5px] xl:px-[100px] ">
         <div class="simplify-img h-full w-full  lg:w-1/2 flex justify-center lg:justify-start items-center lg:pt-[80px] p-[10px]">
             <p><img src="https://martex.windstripedesign.ro/images/img-07.png"class="h-full lg:h-[600px] md:h-full"></p>
         </div>
@@ -306,7 +397,7 @@
                 </span></p>
         </div>
 
-    </div> 
+    </div>  -->
        <!--happy customers-->
     <div class="Happy-customers bg-[#f4f4f9] m-[10px] rounded-lg z-[0] py-[30px] rounded-lg"><h1 class="text-[45px] text-[#353f4f] font-semibold text-center leading-tight pb-[10px]">Our Happy Customers</h1>
         <p class="text-[#6c757d] text-[24px] text-center">Ligula risus auctor tempus magna feugiat lacinia.</p>
