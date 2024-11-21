@@ -18,7 +18,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="counter w-full flex font-semibold flex-wrap gap-[15px] lg:gap-[20px] xl:justify-center py-[70px]">
+    <!-- <div class="counter w-full flex font-semibold flex-wrap gap-[15px] lg:gap-[20px] xl:justify-center py-[70px]">
         <div class="counter-1 md:w-[350px]">
             <div class="flex items-center"><h5 class="count-1 text-[#353f4f] text-[30px] md:text-[60px] pr-[25px] md:pr-[50px]">0K</h5><p class="text-[#6c757d] text-[18px] leading-none">Porta justo integer and velna vitae auctor</p></div>
         </div>
@@ -29,54 +29,41 @@
             <div class="flex items-center"><h5 class="count-3 text-[#353f4f] text-[30px] pr-[20px] md:text-[60px] md:pr-[40px]">0%</h5><p class="text-[#6c757d] text-[18px] leading-none">Sagittis congue augue egestas an egestas</p></div>
         </div>
         
-    </div>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const countElement = document.querySelector('.count-1');
-        let count = 0;
-        const limit = 89;
-        const intervalDuration = 40; // milliseconds
-      
-        const intervalId = setInterval(function() {
-            count++;
-            countElement.textContent = count + "K";
-      
-            if (count >= limit) {
-                clearInterval(intervalId);
-            }
-        }, intervalDuration);
-      });
-      document.addEventListener('DOMContentLoaded', function() {
-        const countElement = document.querySelector('.count-2');
-        let count = 0;
-        const limit = 76;
-        const intervalDuration = 50; // milliseconds
-      
-        const intervalId = setInterval(function() {
-            count++;
-            countElement.textContent = count + "%";
-      
-            if (count >= limit) {
-                clearInterval(intervalId);
-            }
-        }, intervalDuration);
-      });
-      document.addEventListener('DOMContentLoaded', function() {
-        const countElement = document.querySelector('.count-3');
-        let count = 0;
-        const limit =4;
-        const intervalDuration = 1000; // milliseconds
-      
-        const intervalId = setInterval(function() {
-            count++;
-            countElement.textContent = count + ".93";
-      
-            if (count >= limit) {
-                clearInterval(intervalId);
-            }
-        }, intervalDuration);
-      });
+    
+    
+    
+    </div> -->
 
-    </script>
+  
+    
+    <input type="text" class="test" placeholder="Type something" maxlength="9">
+<div class="range h-[8px] w-[500px] bg-[lightgray] relative rounded-full">
+  <div class="fill h-full rounded-full"></div>
+</div>
+
+<script>
+  const getinput = document.querySelector('.test');
+  const fill = document.querySelector('.fill');
+
+  getinput.addEventListener('input', function () {
+    const inputLength = getinput.value.length;
+    const maxLength = 9;
+
+    // Calculate the width as a percentage of the max length
+    const fillPercentage = (inputLength / maxLength) * 100;
+
+    // Update the width and background color dynamically
+    fill.style.width = `${fillPercentage}%`;
+
+    if (inputLength<=3) {
+      fill.style.backgroundColor = 'red';
+    } else if (inputLength <= 4 && inputLength <= 6) {
+      fill.style.backgroundColor = 'blue';
+    } else if (inputLength > 6) {
+      fill.style.backgroundColor = 'green';
+    }
+  });
+</script>
+
+      
 </html>

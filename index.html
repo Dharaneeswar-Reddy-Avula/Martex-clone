@@ -40,19 +40,25 @@
             height: 80px;
         }
     }
-}
-@media(max-width:620px){
-    @keyframes navappear {
-        from {
-            height: 0px;
-        }
-        to {
-            height: 80px;
+    }
+    @media(max-width:620px){
+        @keyframes navappear {
+            from {
+                height: 0px;
+            }
+            to {
+                height: 80px;
+            }
         }
     }
-}
- 
-    
+    .about-options {
+        pointer-events: auto;
+    }
+    .page-options {
+        pointer-events: auto;
+    }
+
+   
    </style>
 </head>
 <body class="relative">
@@ -65,10 +71,26 @@
                         <img src="https://martex.windstripedesign.ro/images/logo-blue.png" class="h-[40px]">
                     </div>
                     <div class="nav-links hidden text-[#353f4f] lg:flex text-[18px] font-semibold  lg:gap-[25px]  h-full justify-center items-center">
-                        <div class="about-wrap relative group">
-                            <a href="#about" class="hover:text-[black]">About <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                        <!-- <div class="about-wrap relative group">
+                            <a href="#about" class="hover:text-[black] relative">About <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
                             <div class="about-options h-[270px] w-[250px] bg-white hidden absolute top-[80px] left-[-100px] p-[10px] group-hover:block rounded-lg shadow-lg transition-opacity duration-300 ease-out"
                               style="animation: optdisp 0.5s ease-out forwards;">
+                              <ul class="w-full h-full">
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Why Matrex?</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Integrations</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">How it works</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Best Solutions</a></li>
+                                <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Testimonials</a></li>
+                              </ul>
+                            </div>
+                          </div> -->
+                      
+                          <div class="about-wrap relative">
+                            <a href="#about" class="hover:text-[black] relative about-trigger">About 
+                              <i class="fa fa-angle-down text-[13px] font-semibold"></i>
+                            </a>
+                            <div 
+                              class="about-options h-[270px] w-[250px] bg-white hidden absolute top-[80px] left-[-100px] p-[10px] rounded-lg shadow-lg transition-opacity duration-300 ease-out">
                               <ul class="w-full h-full">
                                 <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Why Matrex?</a></li>
                                 <li class="p-[10px] text-[20px] w-full hover:bg-[#f4f5f6] rounded-lg hover:text-[dodgerblue] text-center"><a href="#">Integrations</a></li>
@@ -81,7 +103,7 @@
                           
                         <a href="#features" class="hover:text-[black]">Features</a>
                         <div class="pages-wrap relative group">
-                        <a href="#pages" class="hover:text-[black]">Pages <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
+                        <a href="#pages" class="hover:text-[black] page-trigger">Pages <i class="fa fa-angle-down text-[13px] font-semibold"></i></a>
                              <div class="pages-options w-[800px] h-[230px] bg-[white] hidden absolute rounded-lg top-[80px] left-[-300px] group-hover:block rounded-lg shadow-lg transition-opacity duration-300 ease-out" style="animation: optdisp 0.5s ease-out forwards;">
                                 <ul class="w-full h-full flex gap-3 text-[#353f4f]">
                                     <div class="p-[20px] w-1/4">

@@ -1,5 +1,48 @@
 /*nav toggle*/
+const aboutTrigger = document.querySelector('.about-trigger');
+const aboutOptions = document.querySelector('.about-options');
+aboutTrigger.addEventListener('mouseenter', () => {
+  aboutOptions.classList.remove('hidden');
+});
 
+aboutOptions.addEventListener('mouseenter', () => {
+  aboutOptions.classList.remove('hidden');
+});
+
+
+aboutTrigger.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!aboutOptions.matches(':hover')) {
+      aboutOptions.classList.add('hidden');
+    }
+  }, 200); 
+});
+
+aboutOptions.addEventListener('mouseleave', () => {
+  aboutOptions.classList.add('hidden');
+});
+const pageTrigger = document.querySelector('.page-trigger');
+const pageOptions = document.querySelector('.pages-options');
+pageTrigger.addEventListener('mouseenter', () => {
+  pageOptions.classList.remove('hidden');
+});
+
+pageOptions.addEventListener('mouseenter', () => {
+  pageOptions.classList.remove('hidden');
+});
+
+
+pageTrigger.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!pageOptions.matches(':hover')) {
+      pageOptions.classList.add('hidden');
+    }
+  }, 200); 
+});
+
+pageOptions.addEventListener('mouseleave', () => {
+  pageOptions.classList.add('hidden');
+});
 const closebutton=document.querySelector(".close-btn");
 const sidenav=document.querySelector('.sidenav')
 const toggleIcon=document.querySelector("#toggle-icon");
