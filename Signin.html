@@ -23,46 +23,79 @@
   </script>
   </head>
   <body>
-  <div class="signinWrap h-[100vh] w-full bg-[url('SignInBg.jpg')] bg-cover flex justify-center items-center">
-    <div class="flex md:flex-row flex-col md:h-[500px] md:w-[70vw] gap-6 rounded-lg bg-[white]">
-        <div class="flex-1  h-[500px] w-[1/2] hidden md:block">
-                <img src="signbg.png" class="w-full h-full rounded-lg">
+    <div class="signinWrap h-[100vh] w-full bg-[url('SignInBg.jpg')] bg-cover flex justify-center items-center">
+      <div class="flex md:flex-row flex-col md:h-[500px] md:w-[70vw] gap-6 rounded-lg bg-white">
+        <div class="flex-1 hidden md:block">
+          <img src="signbg.png" class="w-full h-full rounded-lg">
         </div>
-        <div class="flex-1 mt-2 py-[30px] px-[40px]">
-            <div class="text-black  font-medium text-[#353f4f]">
-                Username
-            </div>
-            <div class="pt-2">
-                <input type="text" id="username" name="username" class="bg-gray-200  text-[6c757d] rounded-md w-full p-4 outline-[dodgerblue]" placeholder="Username">
-
-            </div>
-            <div class="text-black pt-5 font-medium text-[#353f4f]">
-                Password
-            </div>
-            <div class="pt-2 w-full">
-                <input type="password" id="username" name="username" class="bg-gray-200 text-[6c757d] rounded-md w-full p-4 outline-[dodgerblue]" placeholder="Password">
-
-            </div>
-            <div class="pt-5 text-black  font-medium">
-                <input type="checkbox" name="remember me" id="remember me" class="rounded-md p-4 text">
-                Remember me
-            </div>
-            <div class="pt-5">
-                <button type="button" class="bg-blue-500 w-full mr-10 text-2xl text-white rounded-md p-3">Log in</button>
-            </div>
-            <div class="pt-5 text-[#6c757d]">
-                <a href="#">Create an account</a>
-            </div>
-            <div class="pt-2 text-[#6c757d]">
-                <a href="#">Forgot your user name?</a>
-            </div>
-            <div class="pt-2 text-[#6c757d]">
-                <a href="#">Forgot your password?</a>
-            </div>
+        <div class="flex-1 mt-2 py-5 px-10">
+          <div class="text-black font-medium text-[#353f4f]">Username</div>
+          <div class="pt-2">
+            <input type="text"name="username" class="username bg-gray-200 text-gray-700 rounded-md w-full p-4 outline-dodgerblue" placeholder="Username">
+          </div>
+          <div class="errormsg text-[red]"></div>
+          <div class="text-black pt-5 font-medium text-[#353f4f]">Password</div>
+          <div class="pt-2">
+            <input type="password" id="password" name="password" class="ipassword bg-gray-200 text-gray-700 rounded-md w-full p-4 outline-dodgerblue" placeholder="Password">
+          </div>
+          <div class="perrormsg text-[red]"></div>
+          <div class="pt-5">
+            <label class="flex items-center text-black font-medium remember">
+              <input type="checkbox" id="rememberme" class="mr-2">
+              Remember me
+            </label>
+          </div>
+          <div class="pt-5">
+            <button type="button" class="bg-blue-500 w-full text-2xl text-white rounded-md p-3 flogin">Log in</button>
+          </div>
+          <div class="pt-5 text-gray-600">
+            <a href="#">Create an account</a>
+          </div>
+          <div class="pt-2 text-gray-600">
+            <a href="#">Forgot your user name?</a>
+          </div>
+          <div class="pt-2 text-gray-600">
+            <a href="#">Forgot your password?</a>
+          </div>
         </div>
-       
-        
+      </div>
     </div>
-  </div>
+  
+    <script>
+      const change = document.querySelector('.flogin');
+      const checkbox = document.querySelector('.remember');     
+      const usernameInput = document.querySelector('.username');
+      const passwordInput =document.querySelector('.ipassword');
+      const error=document.querySelector('.errormsg');
+      const perror=document.querySelector('.perrormsg');
+      checkbox.style.display="none";
+      const mypassword="abdcd";
+      change.addEventListener('click', function () {
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+        
+        if (username === "") {
+            error.innerHTML = "*Please enter username";
+            usernameInput.style.border = "2px solid red";
+        } else {
+            error.innerHTML = "";
+            usernameInput.style.border = "2px solid green";
+        }
+    
+        if (password === "") {
+            perror.innerHTML = "*Please enter the password";
+            passwordInput.style.border = "2px solid red";
+        } else if (password !== mypassword) {
+            perror.innerHTML = "*Please enter the correct password";
+            passwordInput.style.border = "2px solid red";
+        } else {
+            perror.innerHTML = "";
+            passwordInput.style.border = "2px solid green";
+            console.log('Submitted successfully');
+        }
+    });
+      
+    </script>
   </body>
+  
 </html>
